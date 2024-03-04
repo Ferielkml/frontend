@@ -1,0 +1,106 @@
+.container {
+    background-color: black;
+    min-height: 225px; /* Use min-height instead of height for flexibility */
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 4rem; /* Maintain existing padding */
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .wrapper {
+    max-width: 1200px; /* Set a max-width for large screens */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem; /* Add padding on the sides */
+  }
+  
+  .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1rem 0; /* Add margin for spacing */
+  }
+  
+  /* Remove specific nth-child styles as they may not behave responsively */
+  
+  .title {
+    color: #06eb80;
+    font-size: larger;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    list-style: none;
+    padding-left: 0; /* Reset padding */
+  }
+  
+  .list > li {
+    color: #777;
+    font-size: 18px;
+  }
+  
+  .list > .workingTime {
+    color: #000;
+    font-size: 20px;
+  }
+  
+  .iconList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 30px;
+    list-style: none;
+    cursor: pointer;
+    transition: 150ms all;
+  }
+  
+  .iconList > *:hover {
+    color: #444;
+  }
+  
+  .attribution {
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+    margin: 3rem auto; /* Centering attribution */
+    text-align: center; /* Align text when stacked */
+  }
+  
+  .attribution a {
+    color: #222;
+    text-decoration: none;
+    transition: 150ms all;
+  }
+  
+  .attribution a:hover {
+    color: #777;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .wrapper {
+      flex-direction: column;
+      align-items: stretch; /* Stretch items to full width */
+      padding: 1rem; /* Adjust padding for smaller screens */
+    }
+  
+    .col {
+      align-items: center; /* Center items in each column */
+      text-align: center; /* Center text for readability */
+    }
+  
+    .iconList {
+      font-size: 24px; /* Scale down icon size on small screens */
+    }
+  }
+  

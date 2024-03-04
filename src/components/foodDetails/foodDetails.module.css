@@ -1,0 +1,98 @@
+.container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    max-width: 250px; /* Set a max-width for larger screens */
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.wrapper {
+    padding: 1rem; /* Added padding for internal spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.title {
+    font-size: 1.5rem; /* Use relative font size units */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center; /* Center the title */
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.quantity > button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+.quantity > button:disabled {
+    background-color: #999;
+}
+
+.quantity > .quantityNumber {
+    font-size: 1rem;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: #f00;
+    margin-top: 1rem;
+}
+
+.addToCart {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    background-color: #f00;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Make button full width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Media query for tablet and desktop sizes */
+@media (min-width: 768px) {
+    .container {
+        max-width: none; /* Allow container to grow on larger screens */
+        display: flex;
+    }
+
+    .wrapper {
+        width: 50%;
+    }
+    
+    .title {
+        font-size: 2rem; /* Increase title size on larger screens */
+        text-align: left; /* Align text to the left */
+    }
+    
+    .addToCart {
+       width: auto; /* Revert to auto width for the button */
+    }
+}
